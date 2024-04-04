@@ -1,4 +1,4 @@
-# Project Name
+# Bun, Hono, React Template
 
 This project consists of a Vite-based client application using React and Tailwind CSS for the frontend, and a Hono server for the backend. It's set up to use Bun for dependency management and script execution.
 
@@ -120,6 +120,10 @@ bun install
 ```
 
 There are some dependencies in the client you may or may not need like `react-router-dom`, `framer-motion`, etc etc. To remove these just run:
+
+```bash
+cd client
+```
 
 ```bash
 bun uninstall <dependency>
