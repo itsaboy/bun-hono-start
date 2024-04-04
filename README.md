@@ -106,6 +106,8 @@ Install dependencies with Bun:
 bun install
 ```
 
+Do this in the root directory and inside both the `/client` and `/server` folders.
+
 ### Development
 
 To start the Vite development server for the frontend, run:
