@@ -1,0 +1,17 @@
+{
+  "name": "bun-hono-start",
+  "module": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cd server && bun run start",
+    "watch": "cd server && bun run dev",
+    "dev": "cd client && bun run dev",
+    "build": "cd client && bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

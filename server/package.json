@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "bun run --hot index.js",
+    "start": "bun run index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "hono": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
