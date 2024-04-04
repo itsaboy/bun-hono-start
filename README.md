@@ -10,9 +10,41 @@ These instructions will get you a copy of the project up and running on your loc
 
 Ensure you have [Bun](https://bun.sh/) installed on your system to manage dependencies and run scripts.
 
-### Installing
+# How to Use This Project as a Template
 
-To use this project as a starting point and push it to a new repository, follow these steps:
+This project is designed to serve as a starting point for your own projects. It is set up as a template repository on GitHub, which simplifies the process of creating a new repository based on this template.
+
+## Using the GitHub Template Repository
+
+To start a new project based on this template:
+
+1. Navigate to the original repository page on GitHub.
+2. Click the "Use this template" button.
+3. Follow the prompts to create a new repository based on this template. You'll be able to choose the owner, name, description, and visibility of your new repository.
+
+This method will copy the repository's content into a new repository under your control, without carrying over the original git history. It's the simplest way to start with a clean slate.
+
+## Optional Methods
+
+While using the GitHub template feature is recommended, you can also manually download or clone the project if you prefer:
+
+### Downloading as a ZIP File
+
+- Navigate to the main page of the repository on GitHub.
+- Click the "Code" button, then select "Download ZIP."
+- Unzip the file on your local machine and begin working on your project.
+
+### Cloning and Pushing to a New Repository (Not Recommended)
+
+If you wish to manually clone and push to a new repository:
+
+Clone the repository (this will include the git history, which is not necessary if you use the template feature):
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git YourProjectName
+```
+
+Follow the steps to remove the git history, initialize a new repository, and push to a new remote as detailed below.
 
 Clone the repository:
 
@@ -59,6 +91,8 @@ git push -u origin main
 ```
 
 Replace `YOUR_USERNAME/YOUR_REPOSITORY_NAME` with the actual username and repository name of this template project, and `YOUR_USERNAME/YourProjectName` with your new project's repository path.
+
+# Installation
 
 Navigate into the project directory:
 
@@ -109,7 +143,7 @@ This will generate a `dist` folder in your client directory, containing the prod
 - `bun.lockb`: Generated file for Bun to lock the versions of dependencies.
 - `README.md`: This file.
 
-## Some Notes
+## Some Info
 
 This project template assumes that you have a .env file in the `/server` folder that defines the `PORT` variable used by `process.env` inside the `index.js` file. Depending on the port number you choose, the proxy set up in the client via `vite.config.js` will need to be changed (default is port 3030).
 
@@ -128,6 +162,8 @@ cd client
 ```bash
 bun uninstall <dependency>
 ```
+
+Note: If, for example, the `@tailwindcss/forms` dependency is uninstalled, make sure to remove its import from "plugins" inside the `tailwind.config.js` file.
 
 ## Acknowledgments
 
