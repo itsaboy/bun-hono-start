@@ -1,6 +1,6 @@
 # Bun, Hono, React Template
 
-This project consists of a Vite-based client application using React and Tailwind CSS for the frontend, and a Hono server for the backend. It's set up to use Bun for dependency management and script execution.
+This project consists of a Vite-based client application using React for the frontend, and a Hono server for the backend. It's set up to use Bun for dependency management and script execution.
 
 ## Getting Started
 
