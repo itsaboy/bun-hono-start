@@ -122,6 +122,8 @@ For the backend, to start the Hono server:
 bun run start
 ```
 
+Note: Starting the server before the frontend has been build will cause a 404 error in the browser.
+
 To watch for changes in the backend and automatically restart the server, use:
 
 ```bash
@@ -147,31 +149,29 @@ This will generate a `dist` folder in your client directory, containing the prod
 
 ## Some Info
 
-This project template assumes that you have a .env file in the `/server` folder that defines the `PORT` variable used by `process.env` inside the `index.js` file. Depending on the port number you choose, the proxy set up in the client via `vite.config.js` will need to be changed (default is port 3030).
+This project template assumes that you will have a .env file in the `/server` folder that defines the `PORT` variable used by `process.env` inside the `index.js` file.
 
-If there happens to be any errors after initializing this template, you may need to delete all the `bun.lockb` files (one in root, server, and client), then in the root directory run:
+If there happens to be any errors after initializing this template, you may need to delete all the `bun.lockb` files (one in root, server, and client), then reinstall dependencies in each directory with:
 
 ```bash
 bun install
 ```
 
-There are some dependencies in the client you may or may not need like `react-router-dom`, `framer-motion`, etc etc. To remove these just run:
+Don't want to use React? While in root, delete the `/client` folder with:
 
 ```bash
-cd client
+rm -rf client
 ```
+
+Then create a new Vite frontend to your specifications with:
 
 ```bash
-bun uninstall <dependency>
+bun create vite@latest
 ```
-
-Note: If, for example, the `@tailwindcss/forms` dependency is uninstalled, make sure to remove its import from "plugins" inside the `tailwind.config.js` file.
 
 ## Acknowledgments
 
 - React documentation: https://reactjs.org/docs/getting-started.html
 - Vite documentation: https://vitejs.dev/guide/
-- Tailwind CSS documentation: https://tailwindcss.com/docs
 - Hono documentation: https://honojs.dev/
 - Bun documentation: https://bun.sh/docs/getting-started
-
